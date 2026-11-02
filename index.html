@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <meta name="description" content="A bright little corner for curious minds. Pick a game and play." />
+    <title>Little Wins | A tiny game room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Little Wins home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>little wins</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link is-current" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="jeopardy.html">The bright board</a>
+        <a class="nav-link" href="trivia.html">Quick trivia</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home-hero image-surface">
+        <img class="surface-image" src="assets/images/home-hero.jpg" data-image-slot data-fallback="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=85" alt="Friends sharing ideas around a table" />
+        <div class="hero-wash"></div>
+        <div class="home-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR LITTLE GAME ROOM</p>
+          <h1>Curiosity looks<br />good on you.</h1>
+          <p class="hero-subtitle">Pick a board, trust your hunch, and collect a few little wins.</p>
+          <a class="button button-dark" href="#choose-game">Find your game <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-stamp" aria-hidden="true"><span>GOOD<br />GUESSES<br />WELCOME</span><b>✳</b></div>
+      </section>
+
+      <section class="game-picker page-wrap" id="choose-game">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TWO WAYS TO PLAY</p>
+            <h2>What sounds fun?</h2>
+          </div>
+          <span class="section-note">Choose a game to jump in</span>
+        </div>
+        <div class="game-links">
+          <a class="game-link game-link-board" href="jeopardy.html">
+            <div class="game-link-art board-art" aria-hidden="true">
+              <span class="mini-tile">GIT</span><span class="mini-tile">AI</span><span class="mini-tile">?</span>
+              <span class="mini-tile">SEC</span><span class="mini-tile">100</span><span class="mini-tile">✳</span>
+            </div>
+            <div class="game-link-copy">
+              <span class="game-number">01 / THE BOARD</span>
+              <h3>Bright Board</h3>
+              <p>Four smart categories. Twenty clues. How high can you score?</p>
+              <span class="text-link">Play the board <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="game-link game-link-trivia" href="trivia.html">
+            <div class="game-link-art trivia-art" aria-hidden="true">
+              <span class="trivia-spark">?</span>
+              <span class="trivia-label trivia-label-one">TRUE</span>
+              <span class="trivia-label trivia-label-two">FALSE</span>
+              <span class="trivia-line"></span>
+            </div>
+            <div class="game-link-copy">
+              <span class="game-number">02 / QUICK FIRE</span>
+              <h3>Quick Trivia</h3>
+              <p>A handful of general-knowledge questions, one point at a time.</p>
+              <span class="text-link">Take the quiz <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-wrap"><span>Little Wins <span aria-hidden="true">✳</span></span><span>Made for curious minds</span></footer>
+  </body>
+</html>

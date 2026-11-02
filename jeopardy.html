@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <meta name="description" content="Take on four categories of clues in the Little Wins Bright Board." />
+    <title>Bright Board | Little Wins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="jeopardy">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Little Wins home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>little wins</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link is-current" href="jeopardy.html" aria-current="page">The bright board</a>
+        <a class="nav-link" href="trivia.html">Quick trivia</a>
+      </nav>
+    </header>
+
+    <main class="page-wrap game-page">
+      <section class="page-hero image-surface board-hero">
+        <img class="surface-image" src="assets/images/jeopardy-header.jpg" data-image-slot data-fallback="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85" alt="A laptop ready for a game of questions" />
+        <div class="hero-wash"></div>
+        <div class="page-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> FOUR CATEGORIES, YOUR CALL</p>
+          <h1>The Bright Board</h1>
+          <p>Pick a clue, make your best guess, and watch your score climb.</p>
+        </div>
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> All games</a>
+      </section>
+
+      <section class="board-section" aria-labelledby="board-heading">
+        <div class="game-toolbar">
+          <div>
+            <p class="eyebrow">THE GAME IS ON</p>
+            <h2 id="board-heading">Choose a clue</h2>
+          </div>
+          <div class="score-tools">
+            <div class="score-display"><span>SCORE</span><strong id="board-score" aria-live="polite">0</strong></div>
+            <button class="button button-quiet" id="board-reset" type="button">Start over <span aria-hidden="true">↻</span></button>
+          </div>
+        </div>
+        <p class="game-hint">Correct answers add points; a miss costs the clue value.</p>
+        <div class="board-scroll" tabindex="0" aria-label="Scrollable game board">
+          <div class="jeopardy-board" id="jeopardy-board"></div>
+        </div>
+        <p class="board-progress" id="board-progress" aria-live="polite">20 clues waiting</p>
+      </section>
+    </main>
+
+    <dialog class="clue-dialog" id="clue-dialog" aria-labelledby="clue-category">
+      <form method="dialog" class="dialog-close-form"><button class="icon-button" type="submit" aria-label="Close clue">×</button></form>
+      <p class="eyebrow" id="clue-category"></p>
+      <p class="clue-value" id="clue-value"></p>
+      <h2 id="clue-text"></h2>
+      <form id="clue-answer-form">
+        <label class="field-label" for="clue-answer">Your answer</label>
+        <input id="clue-answer" name="answer" type="text" autocomplete="off" placeholder="Type your answer" required />
+        <p class="answer-feedback" id="clue-feedback" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button class="button button-dark" id="clue-submit" type="submit">Check answer</button>
+          <button class="button button-quiet" id="clue-pass" type="button">Pass</button>
+          <button class="button button-dark" id="clue-continue" type="button" hidden>Back to board <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </dialog>
+
+    <footer class="site-footer page-wrap"><a href="index.html">← Back to game room</a><span>Little Wins <span aria-hidden="true">✳</span></span></footer>
+  </body>
+</html>

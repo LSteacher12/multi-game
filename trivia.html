@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <meta name="description" content="Play a quick round of general trivia and earn points for each right answer." />
+    <title>Quick Trivia | Little Wins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="trivia">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Little Wins home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>little wins</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="jeopardy.html">The bright board</a>
+        <a class="nav-link is-current" href="trivia.html" aria-current="page">Quick trivia</a>
+      </nav>
+    </header>
+
+    <main class="page-wrap game-page trivia-page">
+      <section class="page-hero image-surface trivia-hero">
+        <img class="surface-image" src="assets/images/trivia-header.jpg" data-image-slot data-fallback="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=85" alt="A bright, welcoming place to learn something new" />
+        <div class="hero-wash"></div>
+        <div class="page-hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A QUICK LITTLE QUIZ</p>
+          <h1>Quick Trivia</h1>
+          <p>Eight questions from all over the place. Every right answer earns 100 points.</p>
+        </div>
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> All games</a>
+      </section>
+
+      <section class="trivia-game" aria-labelledby="trivia-heading">
+        <div class="quiz-panel" id="quiz-panel">
+          <div class="quiz-topline">
+            <span class="quiz-count" id="quiz-count">QUESTION 1 / 8</span>
+            <span class="quiz-points"><span aria-hidden="true">✳</span> 100 PTS EACH</span>
+          </div>
+          <div class="quiz-progress" aria-hidden="true"><span id="quiz-progress-bar"></span></div>
+          <div class="quiz-content" id="quiz-content">
+            <h2 id="trivia-heading">Loading your first question…</h2>
+            <div class="answer-options" id="answer-options"></div>
+            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+            <button class="button button-dark quiz-next" id="quiz-next" type="button" hidden>Next question <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="quiz-results" id="quiz-results" hidden>
+            <p class="eyebrow">THAT'S A WRAP</p>
+            <h2>Nice little run.</h2>
+            <p class="result-score"><strong id="final-score">0</strong><span>points</span></p>
+            <p id="result-message"></p>
+            <button class="button button-dark" id="quiz-restart" type="button">Play again <span aria-hidden="true">↻</span></button>
+          </div>
+        </div>
+        <aside class="quiz-aside" aria-label="Your quiz score">
+          <p class="eyebrow">YOUR SCORE</p>
+          <strong id="trivia-score" aria-live="polite">0</strong>
+          <span>points so far</span>
+          <div class="score-divider"></div>
+          <span class="aside-quote">Trust your first thought.<br />Then trust your second, too.</span>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer page-wrap"><a href="index.html">← Back to game room</a><span>Little Wins <span aria-hidden="true">✳</span></span></footer>
+  </body>
+</html>
